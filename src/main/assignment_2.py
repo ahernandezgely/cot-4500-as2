@@ -152,17 +152,17 @@ if __name__ == "__main__":
     
     x_points = [7.2, 7.4, 7.5, 7.6]
     y_points = [23.5492, 25.3913, 26.8224, 27.4589]
-    m = divided_difference_table(x_points, y_points)
+    divDiffMatrix = divided_difference_table(x_points, y_points)
     
-    approximateValue(m, x_points, 7.3)
+    # the value we want an approximation for
+    x = 7.3
+    approximateValue(divDiffMatrix, x_points, x)
     
     x_points = [3.6, 3.8, 3.9]
     y_points = [1.675, 1.436, 1.318]
     slopes = [-1.195, -1.188, -1.182]
     hermite_interpolation(x_points, y_points, slopes)
-    
-    x_points = [0,1,2,3]
-    y_points = [1,2,4,8]
+
     x_points = [2, 5, 8, 10]
     y_points = [3, 5, 7, 9]
     cubicSplineInterpolation(x_points, y_points)
